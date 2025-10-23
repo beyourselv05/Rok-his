@@ -50,8 +50,8 @@ int main() {
         scanf("%d", &s);
     }while(s<=0);
     
-    printf("왼쪽아래가 직각삼각형인경우\n");  triangleLB(s);
-    printf("왼쪽위가 직각삼각형인경우\n");  triangleLU(s);
-    printf("오른쪽위가 직각삼각형인경우\n");  triangleRU(s);
-    printf("오른쪽아래가 직각삼각형인경우\n");  triangleRB(s);
+    printf("왼쪽아래가 직각삼각형인경우\n\n");  triangleLB(s);
+    printf("왼쪽위가 직각삼각형인경우\n\n");  triangleLU(s);
+    printf("오른쪽위가 직각삼각형인경우\n\n");  triangleRU(s);
+    printf("오른쪽아래가 직각삼각형인경우\n\n");  triangleRB(s);
 }
