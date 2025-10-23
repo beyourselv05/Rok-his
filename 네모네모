@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main() {
+    int a,b,i,j;
+    
+    printf("정사각형의 밑변 : ");  scanf("%d", &a); printf("\n");
+    printf("정사각형의 높이 : ");  scanf("%d", &b);
+    for (i = 0; i < b; i++) {
+        for (j = 0; j < a; j++) {
+            putchar('*');
+        }
+        printf("\n");
+    }
+}
