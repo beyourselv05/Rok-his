@@ -1,0 +1,57 @@
+#include <stdio.h>
+
+void triangleLB (int s) {   /*왼쪽아래*/
+    for (int i = 1; i <= s; i++) {
+        for(int j = 1; j <= i; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+void triangleLU (int s) {   /*왼쪽위*/
+    for(int i = 1; i <= s; i++) {       /*만약 i가 1,2,3으로 커짐. i1(j는3) i2(j는2)* i3(j는1) */
+        for(int j = 1; j <= s - i + 1; j++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+void triangleRU (int s) {   /*오른쪽위*/
+    for(int i = 1; i <= s; i++) {
+        for(int j = 1; j <= i - 1; j++) {
+            printf(" ");
+        }
+        for(int k = 1; k <= s - i + 1; k++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+void triangleRB (int s) {   /*오른쪽아래*/
+    for(int i = 1; i <= s; i++) {
+        for (int j = 1; j <= s - i; j++) {
+            printf(" ");
+        }
+        for(int k = 1; k <= i; k++) {
+            printf("*");
+        }
+        printf("\n");
+    }
+}
+
+int main() {
+    printf("직각삼각형을 출력해볼게용\n\n");
+    int s;
+    do{
+        printf("크기:");
+        scanf("%d", &s);
+    }while(s<=0);
+    
+    printf("왼쪽아래가 직각삼각형인경우\n");  triangleLB(s);
+    printf("왼쪽위가 직각삼각형인경우\n");  triangleLU(s);
+    printf("오른쪽위가 직각삼각형인경우\n");  triangleRU(s);
+    printf("오른쪽아래가 직각삼각형인경우\n");  triangleRB(s);
+}
