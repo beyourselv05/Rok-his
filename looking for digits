@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(int a) {
+    do {
+        printf("양의 정수 : ");
+        scanf("%d", &a);
+    }while(a<=0);
+    
+    int digits = 0;
+    while(a>0) {
+        a = a / 10;
+        digits++;
+    }
+    
+    printf("정수의 자릿수는 %d", digits);
+    return 0;
+}
