@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <malloc.h>
+
+void main()
+{
+    int *num, count = 0, sum = 0, limit = 0, i;
+    
+    printf("사용할 최대개수 입력하쇼 : ");
+    scanf("%d", &limit);
+    
+    num = (int *)malloc(sizeof(int)*limit);
+    
+    while(count < limit) {
+        printf("숫자를 입력하세요 (9999입력시 종료) : ");
+        scanf("%d", num + count);
+        if(*(num + count) == 9999) break;
+        count++;
+    }
+    
+    for(i = 0; i < count; i++) {
+        if(i > 0) printf(" + ");
+        printf(" %d ", *(num + i));
+        sum = sum + *(num + i);
+    }
+    printf(" = %d\n", sum);
+    free(num);
+}
